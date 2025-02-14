@@ -9,18 +9,22 @@
 </head>
 <body>
     {% include "header.html" %}
-    <form method="POST">
+    <form method="POST" >
         {% csrf_token %}
-        <div>
         {% for field in form %}
-        <div>
-            {{field.label_tag}}
             <div>{{field}}</div>
-        </div>
         {% endfor %}
-        </div>
         <input type="submit" value="Send" >
     </form>
-
+    <div>
+        
+        {% for film in films %}
+            <div class='film'> 
+                <img src={{ film.image }} >
+                {{ film.name }} 
+                {{ film.creationYear }}
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
