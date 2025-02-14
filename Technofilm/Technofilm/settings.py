@@ -120,7 +120,7 @@ STATIC_URL = 'static/'
 
 import os
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "Technofilm\\static\\"),
+    os.path.join(BASE_DIR, "main\\static\\"),
 )
 
 # Default primary key field type

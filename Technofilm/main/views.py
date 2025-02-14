@@ -16,3 +16,6 @@ def search(request):
             return render(request, "search.html", {"form": userform, "films":films})
     return render(request, "search.html", {"form": userform, "films":[]})
 
+def film(request, id):
+    return render(request, "film.html", {"film": Film(id)})
+

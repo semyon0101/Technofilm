@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
     <script src="{% static "javascript/script.js" %}"></script>
     <title>Technofilm</title>
 </head>
@@ -19,11 +19,13 @@
     <div>
         
         {% for film in films %}
+            <a href = "/film/{{film.id}}">
             <div class='film'> 
                 <img src={{ film.image }} >
-                {{ film.name }} 
-                {{ film.creationYear }}
+                <div class='name'>{{ film.name }} </div>
+                <div class='year'>{{ film.creationYear }}</div>
             </div>
+            </a>
         {% endfor %}
     </div>
 </body>

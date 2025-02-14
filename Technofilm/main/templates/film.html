@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="{% static "javascript/script.js" %}"></script>
+    <title>Technofilm</title>
+</head>
+<body>
+    <div class='film'> 
+        <img src={{ film.image }} >
+        <div class='name'>{{ film.name }} </div>
+        <div class='year'>{{ film.creationYear }}</div>
+    </div>
+</body>
+</html>
