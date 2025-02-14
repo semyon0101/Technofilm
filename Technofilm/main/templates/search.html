@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static "css/styles.css" %}" />
+    <script src="{% static "javascript/script.js" %}"></script>
+    <title>Technofilm</title>
+</head>
+<body>
+    {% include "header.html" %}
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+        {% for field in form %}
+        <div>
+            {{field.label_tag}}
+            <div>{{field}}</div>
+        </div>
+        {% endfor %}
+        </div>
+        <input type="submit" value="Send" >
+    </form>
+
+</body>
+</html>

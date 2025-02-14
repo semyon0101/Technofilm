@@ -1,0 +1,84 @@
+
+            
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #660000;
+    color: #3E2723;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+body {
+    display: grid;
+    min-height: 30vh;
+    margin: 0;
+    text-align: center; 
+    background-color: #660000;
+    display: grid;
+    place-items: center ;
+
+
+}
+
+
+
+
+.custom-button{
+background-color: #F5DEB3;
+color: #d9af3a;
+border: 0;
+border-radius: 0.5em;
+border-style: inset;
+padding: 1em;
+font-size: 1em;
+font-weight: 700;
+text-transform: uppercase;
+line-height: 1;
+cursor: pointer;
+box-shadow: 0 0.35em 00 #3E2723;
+
+}
+.justify {
+    text-align: right;
+}
+#myElement {
+width: 200px;
+height: 100px;
+
+}
+
+.custom-search{
+background-color: #F5DEB3;
+color: #000000;
+border: 0;
+border-radius: 0.5em;
+border-style: inset;
+padding: 1em;
+font-size: 1em;
+font-size: 1em;
+font-weight: 700;
+text-transform: uppercase;
+line-height: 1;
+cursor: pointer;
+
+
+}
+.pon {
+    background-color: #4b0404;
+    border: 0;
+    border-radius: 0.5em;
+    border-style: inset;
+    padding: 1em;
+    font-size: 1em;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    
+    font-family: 'times new roman', sans-serif; /* Шрифт для заголовка h1 */
+    color: #000000; /* Цвет текста */
+    font-size: 36px; /* Размер шрифта */
+}
