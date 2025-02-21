@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="{% static "css/style.css" %}" />
-    <title>Technofilm</title>
-</head>
-<body>
-    {% include "header.html"  %}
-    <div id="project1" style="display: block;">
-        <h1 class="pon" >Проект "Technofilm"</h1>
-        <h3 class="pon" >Это сайт по поиску фильмов</h3>
-        <h3 class="pon" >Каждый найдёт для себя свой</h3>
-        <h3 class="pon" >Готовы начать?</h3>
-    </div>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="{% static "css/style.css" %}" />
+        <script src="/static/javascript/script.js"></script>
+        <title>СмотрИИ</title>
+    </head>
+    <body>
+        <h1 class="pon" style="color: #F5DEB3">Проект "СмотрИИ"</h1>
+        <h3 class="pon" style="color: #F5DEB3">Это сайт по поиску фильмов</h3>
+    <h3 class="pon" style="color: #F5DEB3">Каждый найдёт для себя свой</h3>
+    <h3 class="pon" style="color: #F5DEB3">Готовы начать? Тогда нажмите на кнопку, чтобы начать</h3>
     <br>
-    <div>Создано при адском труде</div>
-</body>
+    <br>
+        <div >  <a href="/search" class="custom-button" style="text-decoration: none; color: #3E2723;">Поиск</a></div>
+    </body>
+
 </html>

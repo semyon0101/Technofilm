@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import UserForm
 from db import Film
+from search import searchFilm
  
 def main(request):
     return render(request, "main.html")
@@ -19,3 +20,10 @@ def search(request):
 def film(request, id):
     return render(request, "film.html", {"film": Film(id)})
 
+def index(request):
+    return render(request, "index.html")
+
+def find(request):
+    string = request.GET['string']
+    films = searchFilm(string)
+    return HttpResponse(f"""{films}""")

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <link  rel="stylesheet" href="{% static "css/style.css" %}" />
+    <script src="/static/javascript/script.js"></script>
+    <title>СмотрИИ</title>
+</head>
+<body>
+    
+        <script>
+            function searchMovies() {
+                const query = document.getElementById('search-input').value;
+                fetch(`/search?query=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const results = document.getElementById('results');
+                        results.innerHTML = '';
+                        data.forEach(movie => {
+                            const li = document.createElement('li');
+                            li.textContent = `${movie.title} (${movie.year}) - Directed by ${movie.director}`;
+                            results.appendChild(li);
+                        });
+                    });
+            }
+        </script>
+    
+        <br>
+        <br>
+    <div ><a href="/" class="custom-button" style="text-decoration: none; color: #3E2723;">Главная</a></div>
+    
+    <br>
+    <br>
+    <form method="POST" >
+        <div class="search-container">
+        <input type="hidden" name="csrfmiddlewaretoken" value="EEsto3mzKNPTlXVGaetnIn9WBUwCVh47zCA7uD3yybf4fzTGJohC9MxMgHLugmoh">
+        <div><input type="text" name="value" placeholder="Введите название" class="custom-search" id="id_value">&nbsp; &nbsp;</div>
+        <input class = "custom-button"type="submit" value="Send" >
+        </div>
+    </form>
+    
+    <br>
+    <br>
+    <div>
+        
+        
+            <div class='film'> 
+                <img src=//cfm.yidio.com/images/movie/251265/poster-180x270.jpg >
+                <div class='name' color="#f8e8ca">Blitz </div>
+                <div class='year' color="#F5DEB3">2024</div>
+            </div>
+        
+    </div>
+</body>
+</html>
