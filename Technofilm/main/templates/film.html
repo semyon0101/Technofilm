@@ -9,9 +9,13 @@
 </head>
 <body>
     <div class='film'> 
-        <img src={{ film.image }} >
+        <img src={{ film.poster }} >
         <div class='name'>{{ film.name }} </div>
-        <div class='year'>{{ film.creationYear }}</div>
+        <div class='year'>{{ film.dateCreated }}</div>
+        <div class='genres'>
+            {% for genre in film.genres %}{{genre}}{% if not forloop.last %}, {% endif %}{% endfor %}
+        </div>
+        <div class='descriptions'>{{ film.descriptions.0 }}</div>
     </div>
 </body>
 </html>
