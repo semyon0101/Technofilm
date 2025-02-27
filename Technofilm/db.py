@@ -27,7 +27,17 @@ class Film(dict):
         st=st.replace('\\t','\t')
         st = re.sub(r'(?![\w ,.\'\"\[\]\n\t\r])',r'',st)
 
-        descriptions = st[2:-2].split("\", \"")
+        descriptions_ = st[2:-2].split("\", \"")
+        descriptions=[]
+        for i in descriptions_:
+            if len(i)!=0:
+                descriptions.append(i)
+        if len(descriptions)==0:
+            descriptions.append('Информация не найдена')
+            descriptions.append('Информация не найдена')
+        if len(descriptions)==1:
+            descriptions.append(descriptions[0])
+        
         if len(descriptions)!=2:
             print(self.id)
 

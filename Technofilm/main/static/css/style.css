@@ -11,60 +11,59 @@
 
 body {
     display: grid;
-    min-height: 30vh;
     margin: 0;
-    background: linear-gradient(to left, #ff5151, #f27b7b);;
+    background: linear-gradient(to left, #ff5151, #f27b7b);
+    ;
     display: grid;
-    place-items: center ;
+    place-items: center;
     font-family: 'Century Gothic', sans-serif;
 
 
 }
 
-.custom-button{
-background-color: #F5DEB3;
-color: #3E2723;
-border: 0;
-border-radius: 0.5em;
-border-style: inset;
-padding: 1em;
-font-size: 1em;
-font-weight: 700;
-text-transform: uppercase;
-line-height: 1;
-cursor: pointer;
-box-shadow: 0 0.35em 00 #3E2723;
-font-family: 'Century Gothic', sans-serif;
+.custom-button {
+    background-color: #F5DEB3;
+    color: #3E2723;
+    border: 0;
+    border-radius: 0.5em;
+    border-style: inset;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 0.35em 00 #3E2723;
+    font-family: 'Century Gothic', sans-serif;
 
 }
+
 .justify {
     text-align: right;
 }
+
 #myElement {
-width: 200px;
-height: 100px;
+    width: 200px;
+    height: 100px;
 
 }
 
-.custom-search{
-background-color: #ffefd7;
-color: #3E2723;
-border: 0;
-border-radius: 0.5em;
-border-style: ridge;
-padding: 1em;
-font-size: 1em;
-font-weight: 700;
-text-transform: uppercase;
-line-height: 1;
-cursor: text;
-font-family: 'Century Gothic', sans-serif;
-clip-path:polygon()
-
-
-
-
+.custom-search {
+    background-color: #ffefd7;
+    color: #3E2723;
+    border: 0;
+    border-radius: 0.5em;
+    border-style: ridge;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: text;
+    font-family: 'Century Gothic', sans-serif;
+    clip-path: polygon()
 }
+
 .pon {
     background-color: linear-gradient(to right, #cc3737, #ce5e5e);
     border: 0;
@@ -74,37 +73,87 @@ clip-path:polygon()
     font-size: 1em;
     font-size: 1em;
     font-weight: 100;
-    border:1px solid 
-    
-    rgb(255, 1, 1);
-    border-radius:20px;
+    border: 1px solid rgb(255, 1, 1);
+    border-radius: 20px;
     text-transform: uppercase;
     line-height: 1;
     cursor: default;
-    
-    font-family: 'Century Gothic', sans-serif; /* Шрифт для заголовка h1 */
-    color: #000000; /* Цвет текста */
-    font-size: 24px; /* Размер шрифта */
+
+    font-family: 'Century Gothic', sans-serif;
+    /* Шрифт для заголовка h1 */
+    color: #000000;
+    /* Цвет текста */
+    font-size: 24px;
+    /* Размер шрифта */
 }
+
 .search-container {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .search-container input[type="text"] {
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-radius: 4px 0 0 4px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
 }
+
 .search-container button {
-padding: 10px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-left: none;
-border-radius: 0 4px 4px 0;
-background-color: #f0f0f0;
-cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
+
 .search-container button:hover {
-background-color: #e0e0e0;
+    background-color: #e0e0e0;
+}
+
+.film {
+    display: flex;
+    width: 1000px;
+    margin: 15px;
+    background: indianred;
+}
+
+.container_main {
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.name_and_year {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container_links {
+    margin: 40px;
+}
+
+.poster_link {
+    display: flex;
+}
+.poster{
+    margin:5px;
+}
+.small-descriptions {
+    text-align: justify;
+}
+
+.genres{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#idForm{
+    margin-bottom: 20px;
 }

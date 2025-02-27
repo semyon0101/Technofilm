@@ -8,14 +8,22 @@
     <title>Technofilm</title>
 </head>
 <body>
+    <div class='container_links'>
+        <a href="/" class="custom-button" style="text-decoration: none; color: #3E2723;">Главная</a> &emsp; 
+        <a href="/search" class="custom-button" style="text-decoration: none; color: #3E2723;">Поиск</a> 
+    </div>
     <div class='film'> 
-        <img src={{ film.poster }} >
-        <div class='name'>{{ film.name }} </div>
-        <div class='year'>{{ film.dateCreated }}</div>
+        <img class="poster" src={{ film.poster }} >
+        <div class="container_main">
+        <div class="name_and_year">
+            <h2 class='name' color="#f8e8ca">{{ film.name }} </h2>&emsp;
+            <h2 class='year' color="#F5DEB3">{{ film.dateCreated }}</h2>
+        </div>
         <div class='genres'>
             {% for genre in film.genres %}{{genre}}{% if not forloop.last %}, {% endif %}{% endfor %}
         </div>
         <div class='descriptions'>{{ film.descriptions.0 }}</div>
+        </div>
     </div>
 </body>
 </html>

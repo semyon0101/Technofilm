@@ -12,21 +12,15 @@
 </head>
 <body>
     
-    <br>
-    <br>
-    <div ><a href="/" class="custom-button" style="text-decoration: none; color: #3E2723;">Главная</a></div>
+    <div class='container_links'><a href="/" class="custom-button" style="text-decoration: none; color: #3E2723;">Главная</a></div>
 
-    <br>
-    <br>
     <form id = "idForm" method="GET" onsubmit='return false'>
         <div class="search-container">
         <div><input type="text" name="value" placeholder="Введите название" class="custom-search" id="id_value" autocomplete="off">&nbsp; &nbsp;</div>
-        <input id="submitButtonId" class = "custom-button" type="button" value="Send" >
+        <input id="submitButtonId" class = "custom-button" type="button" value="Найти" >
         </div>
     </form>
     
-    <br>
-    <br>
     <div id='filmsContainer'>
         
     </div>
@@ -37,10 +31,14 @@
             for (let i = 0; i < obj.length; i++) {
                 str+= `
                 <div class='film'> 
-                    <a href="/film/${obj[i]['id']}"><img src=${obj[i]['poster']} ></a>
-                    <a href="/film/${obj[i]['id']}"><div class='name' color="#f8e8ca">${obj[i]['name']} </div></a>
-                    <div class='year' color="#F5DEB3">${obj[i]['dateCreated']}</div>
+                    <a class="poster_link" href="/film/${obj[i]['id']}"><img class="poster"src=${obj[i]['poster']} ></a>
+                    <div class="container_main">
+                    <div class="name_and_year">
+                    <a href="/film/${obj[i]['id']}"><h2 class='name' color="#f8e8ca">${obj[i]['name']} </h2></a>&emsp;
+                    <h2 class='year' color="#F5DEB3">${obj[i]['dateCreated']}</h2>
+                    </div>
                     <div class='small-descriptions'>${obj[i]['descriptions'][1]}</div>
+                    </div>
                 </div>
                 `;
             }
