@@ -20,6 +20,3 @@ def find(request):
     else:
         films=""
     return HttpResponse(f"""{films}""")
-
-# def index(request):
-#     return render(request, "index.html")

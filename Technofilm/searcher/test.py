@@ -46,8 +46,8 @@ def find_lines_with_similar_words(word, tags, model, topn=10):
 def search(string, maxLength=10):
     ids = []
 
-    for i,film in enumerate(db._films):
-        if string in "".join(film):
+    for i,film in enumerate(db._films): 
+        if string.lower() in "".join(film[1:4]).lower():
             ids.append(i-1)
 
     if len(ids)>=maxLength:

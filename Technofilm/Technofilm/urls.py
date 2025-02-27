@@ -7,5 +7,4 @@ urlpatterns = [
     path('search', views.search),
     path('film/<int:id>', views.film),
     path("find",views.find),
-    # path("index", views.index),
 ]
