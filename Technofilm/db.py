@@ -9,18 +9,19 @@ with open('filmdata.csv', 'r', encoding="utf-8") as f:
 
     for row in reader:
         _films.append(row)
+_films.pop(0)
 
 # класс фильм
 class Film(dict):
     def __init__(self, id):
         self.id = id
-        self.poster = _films[self.id+1][0]
-        self.name = _films[self.id+1][1]
-        self.dateCreated = _films[self.id+1][2]
-        self.genres = list(json.loads(_films[self.id+1][3].replace('\'', '\"')))
+        self.poster = _films[self.id][0]
+        self.name = _films[self.id][1]
+        self.dateCreated = _films[self.id][2]
+        self.genres = list(json.loads(_films[self.id][3].replace('\'', '\"')))
 
         #распологаю в порядке убывания описания
-        st=_films[self.id+1][4]
+        st=_films[self.id][4]
         st=st.replace('\'', '\"')
         st=st.replace('\\n','\n')
         st=st.replace('\\r',"\r")

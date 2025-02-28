@@ -7,5 +7,6 @@ def searchFilm(string):
     ids = search(string)
     films = []
     for id in ids:
+        print(id)
         films.append(Film(id))
     return json.dumps(films)

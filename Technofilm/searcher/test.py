@@ -48,7 +48,7 @@ def search(string, maxLength=10):
 
     for i,film in enumerate(db._films): 
         if string.lower() in "".join(film[1:4]).lower():
-            ids.append(i-1)
+            ids.append(i)
 
     if len(ids)>=maxLength:
         return ids[:maxLength]
@@ -60,7 +60,7 @@ def search(string, maxLength=10):
 
     matching_lines = list(set(matching_lines))
     for number in matching_lines:
-        ids.append(number-1)
+        ids.append(number)
     return ids[:maxLength]
 
 # Путь к zip-файлу
